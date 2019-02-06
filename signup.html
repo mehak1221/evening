@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<title>Insert title here</title>
+<style>
+* {box-sizing: border-box;}
+.container
+{
+ background-color:white;
+ height:580px;
+ width:380px;
+ margin:auto;
+ padding: 25px;
+ border-radius: 10px;
+}
+.txt
+{
+ width: 100%;
+  padding: 10px;
+  outline: none;
+  }
+  .input-container {
+  display: -ms-flexbox; 
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.btn
+{
+background-color:#1e003d;
+color:white;
+width:100%;
+padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.btn:hover
+{
+background-color:#4e046d;
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.icon {
+  padding: 10px;
+  background:#1e003d ;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+}
+</style>
+</head>
+<body style="background-color:#DCC6E0">
+<div class="container">
+<h1><center>SIGN UP</center></h1>
+<form  method="post" action="/action1.php" autocomplete="on">
+<div class="input-container"><i class="fas fa-user icon"></i><input class="txt" type="text" id="name" name="fname" onmouseover="myFunction(this)" onmouseout="myFunction1(this)" onkeyup="myfun()" placeholder="Name" required></div>
+<div class="input-container"> <i class="fas fa-envelope icon"></i><input class="txt" type="email" id="name" name="mail" placeholder="Email" onmouseover="myFunction(this)" onmouseout="myFunction1(this)" required></div>
+<div class="input-container"><i class="fas fa-lock icon"></i><input class="txt" type="password"  id="name"name="password" placeholder="Password" onmouseover="myFunction(this)" onmouseout="myFunction1(this)" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" required></div>
+<div class="input-container"><i class="fas fa-lock icon"></i><input class="txt" type="password"  id="name"name="cfpsw" placeholder="Confirm Password" onmouseover="myFunction(this)" onmouseout="myFunction1(this)" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" required></div>
+<div class="input-container"><i class="fas fa-mobile icon"></i><input class="txt" type="text" id="name" name="mbn" placeholder="Mobile" pattern="(?=.*\d).{10,10}" onmouseover="myFunction(this)" onmouseout="myFunction1(this)"  required></div>
+<button type="submit" class="btn">Submit</button>
+</form></div>
+<script>
+function myFunction(x)
+	{
+	 x.style.background="lightblue";
+	}
+function myFunction1(y)
+	 {
+	 y.style.background="white";
+	}
+	function myfun()
+	{
+		var z=document.getElementById("name");
+		z.value=z.value.toUpperCase();
+	}
+</script>
+</body>
+</html>
